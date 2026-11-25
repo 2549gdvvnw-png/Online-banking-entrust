@@ -1,0 +1,395 @@
+/*
+ * ENTRUST FARMERS BANK - Red & White Theme
+ * Bank of America Inspired Layout
+ * Red: #C41230 | White: #FFFFFF | Dark: #1A1A1A
+ * FULL WIDTH HEADER + FOOTER - Phone / Tablet / PC
+ */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #1a1a1a;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.bofa-layout {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  overflow-x: hidden;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img { max-width: 100%; height: auto; }
+
+/* ===== 1. TOP RED BAR - FULL WIDTH ALL DEVICES ===== */
+.topbar {
+  background: #c41230;
+  color: #fff;
+  font-size: 1.3rem;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  border-radius: 0 !important;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+.topbar__inner {
+  width: 100% !important;
+  max-width: 128rem !important;
+  margin: 0 auto !important;
+  padding: 0.8rem 3rem !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+.topbar__links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.topbar__links a { color: #fff; text-decoration: none; margin-left: 2rem; white-space: nowrap; }
+.topbar__links a:first-child { margin-left: 0; }
+.topbar__links a:hover { text-decoration: underline; }
+
+/* ===== 2. MAIN NAV - FULL WIDTH ALL DEVICES ===== */
+nav { display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+.main-nav {
+  background: #fff;
+  border-bottom: 4px solid #c41230;
+  box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.05);
+  width: 100vw !important;
+  max-width: 100vw !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  border-radius: 0 !important;
+  padding: 1.2rem 3rem !important;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.nav__left { display: flex; align-items: center; min-width: 0; }
+.brand-name { font-size: 2rem; letter-spacing: 1px; margin-left: 1rem; font-weight: 500; white-space: nowrap; }
+.brand-name b { color: #c41230; }
+.nav__links { display: flex; flex-wrap: wrap; }
+.nav__links a { text-decoration: none; color: #333; font-size: 1.5rem; margin: 0 1.2rem; white-space: nowrap; }
+.nav__links a.active { color: #c41230; font-weight: 600; border-bottom: 3px solid #c41230; padding-bottom: 0.5rem; }
+.nav__links a:hover { color: #c41230; }
+.nav__right { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; min-width: 0; }
+.welcome { font-size: 1.9rem; font-weight: 500; color: #1a1a1a; word-break: break-word; }
+.logo { height: 5.25rem; max-width: none; }
+
+/* ===== 3. LOGIN + HERO ===== */
+.login-section { display: flex; justify-content: center; align-items: center; min-height: 75vh; padding: 2rem; width: 100%; box-sizing: border-box; }
+.bofa-hero { display: block; min-height: auto; padding: 0; background: #fff; width: 100% !important; max-width: 100% !important; margin: 0 !important; }
+.hero__inner {
+  max-width: 120rem; width: 100%; margin: 0 auto;
+  display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; padding: 5rem 2rem; align-items: center;
+  background: linear-gradient(90deg, #fff 55%, #fff5f6 100%);
+  box-sizing: border-box;
+}
+.hero__eyebrow { color: #c41230; font-weight: 700; letter-spacing: 2px; font-size: 1.3rem; text-transform: uppercase; }
+.hero__text h1 { font-size: 4.5rem; line-height: 1.1; color: #1a1a1a; margin: 1.5rem 0; font-weight: 700; }
+.hero__text > p { font-size: 1.7rem; color: #555; max-width: 50rem; line-height: 1.6; }
+.hero__list { list-style: none; margin: 2rem 0; font-size: 1.5rem; display: flex; flex-direction: column; gap: 0.8rem; color: #333; }
+.hero__badges { display: flex; gap: 1rem; flex-wrap: wrap; }
+.hero__badges span { background: #f5f5f5; padding: 0.8rem 1.5rem; border-radius: 10rem; font-size: 1.3rem; }
+
+.login-card {
+  background: #fff; padding: 4rem 5rem; border-radius: 1rem; border-top: 6px solid #c41230;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,0.1); text-align: center; width: 42rem; max-width: 100%;
+  box-sizing: border-box;
+}
+.bofa-login-card { border-top: none; border: 1px solid #ddd; box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.12); }
+.login-card__logo { height: 5rem; margin-bottom: 1.5rem; }
+.login-card h2 { font-size: 2.2rem; margin-bottom: 0.8rem; color: #c41230; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.login-card > p { font-size: 1.5rem; color: #666; }
+.login-card .login { display: flex; flex-direction: column; gap: 1.2rem; margin-top: 2.5rem; }
+.login__label { text-align: left; font-size: 1.3rem; font-weight: 600; color: #333; margin-bottom: -0.8rem; }
+.login-card .login__input {
+  width: 100%; padding: 1.2rem 1.5rem; font-size: 1.6rem; font-family: inherit; text-align: center;
+  border-radius: 0.7rem; color: inherit; border: 1px solid #ddd; background: #fff; transition: all 0.3s;
+  box-sizing: border-box;
+}
+.login-card .login__input:focus { outline: none; border: 1px solid #c41230; }
+.login-card .login__input::placeholder { color: #bbb; }
+.login-card .login__btn { padding: 1.2rem; border-radius: 0.7rem; background: #c41230; color: #fff; font-size: 1.7rem; font-weight: 600; cursor: pointer; border: none; transition: all 0.3s; width: 100%; }
+.login-card .login__btn:hover { background: #a30e28; }
+.login__link { font-size: 1.3rem; color: #c41230; text-decoration: none; text-align: center; }
+.login__divider { margin: 1.5rem 0 1rem; font-size: 1.3rem; color: #888; }
+.login__enroll { width: 100%; padding: 1.1rem; border: 1px solid #c41230; background: #fff; color: #c41230; border-radius: 0.7rem; font-size: 1.5rem; font-weight: 600; cursor: pointer; }
+.login__hint { margin-top: 1.5rem !important; font-size: 1.3rem !important; color: #888 !important; }
+
+.btn--logout { padding: 0.8rem 1.8rem; border-radius: 0.7rem; border: none; background: #c41230; color: #fff; font-size: 1.5rem; font-weight: 500; cursor: pointer; white-space: nowrap; }
+.btn--logout:hover { background: #a30e28; }
+
+.login { display: flex; }
+.login__input { border: none; padding: 0.5rem 2rem; font-size: 1.6rem; font-family: inherit; text-align: center; width: 12rem; border-radius: 10rem; margin-right: 1rem; color: inherit; border: 1px solid #fff; transition: all 0.3s; }
+.login__input:focus { outline: none; border: 1px solid #ccc; }
+.login__input::placeholder { color: #bbb; }
+.login__btn { border: none; background: none; font-size: 2.2rem; color: inherit; cursor: pointer; transition: all 0.3s; }
+.login__btn:hover, .login__btn:focus, .btn--sort:hover, .btn--sort:focus { outline: none; color: #c41230; }
+
+.info-strip {
+  width: 100% !important; max-width: 100% !important; display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid #eee; padding: 2.5rem 3rem !important; background: #fff; box-sizing: border-box;
+}
+.info-strip div { display: flex; flex-direction: column; gap: 0.3rem; min-width: 0; }
+.info-strip b { font-size: 2rem; color: #c41230; }
+.info-strip span { font-size: 1.3rem; color: #666; }
+
+/* ===== 4. DASHBOARD ===== */
+.app {
+  position: relative; max-width: 100rem; width: 100%; margin: 4rem auto;
+  display: grid; grid-template-columns: 4fr 3fr; grid-template-rows: auto repeat(3, 15rem) auto;
+  gap: 2rem; opacity: 0; pointer-events: none; transition: all 1s; padding: 0 2rem;
+  box-sizing: border-box; flex: 1;
+}
+
+.dashboard-tabs {
+  grid-column: 1 / span 2; display: flex; gap: 0; background: #fff;
+  border-radius: 1rem 1rem 0 0; border: 1px solid #eee; border-bottom: 3px solid #c41230; overflow: hidden;
+}
+.tab-btn { flex: 1; padding: 1.5rem 1rem; border: none; background: #fff; font-size: 1.5rem; font-weight: 600; cursor: pointer; color: #666; min-width: 0; white-space: nowrap; }
+.tab-btn.active { background: #c41230; color: #fff; }
+.tab-content { display: none; grid-column: 1 / span 2; min-width: 0; }
+.tab-content.active { display: grid; grid-template-columns: 4fr 3fr; gap: 2rem; min-width: 0; }
+
+.accounts-overview { grid-column: 1 / span 2; background: #fff; border: 1px solid #eee; border-radius: 1rem; padding: 2rem 3rem; box-sizing: border-box; min-width: 0; }
+.accounts-overview h3 { font-size: 1.8rem; margin-bottom: 1.5rem; color: #1a1a1a; }
+.accounts-overview__note { margin-top: 1.2rem; font-size: 1.3rem; color: #888; }
+.account-list { display: flex; flex-direction: column; gap: 1rem; }
+.account-item { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.5rem 2rem; border: 1px solid #eee; border-radius: 1rem; cursor: pointer; flex-wrap: wrap; box-sizing: border-box; }
+.account-item.active-account { border-left: 5px solid #c41230; background: #fff5f6; }
+.account-item__name { font-size: 1.6rem; font-weight: 600; }
+.account-item__owner { font-size: 1.3rem; color: #888; }
+.account-item__right { text-align: right; min-width: 0; }
+.account-item__label { font-size: 1.2rem; color: #888; text-transform: uppercase; }
+.account-item__balance { font-size: 2rem; font-weight: 600; color: #c41230; word-break: break-word; }
+
+.profile-card {
+  grid-column: 1 / span 2; background: #fff; border: 1px solid #eee; border-left: 6px solid #c41230;
+  border-radius: 1rem; padding: 2rem 3rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+  box-sizing: border-box; min-width: 0;
+}
+.profile-card__label { font-size: 1.2rem; color: #c41230; font-weight: 700; letter-spacing: 1px; }
+.profile__name { font-size: 2.4rem; margin: 0.5rem 0 0.2rem; color: #1a1a1a; word-break: break-word; }
+.profile__user { font-size: 1.4rem; color: #888; }
+.profile-card__right { text-align: right; font-size: 1.4rem; line-height: 1.8; color: #333; min-width: 0; }
+.profile__address, .profile__email { word-break: break-word; overflow-wrap: anywhere; }
+
+.balance {
+  grid-column: 1 / span 2; display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  margin-bottom: 2rem; background: #c41230; color: #fff; padding: 2.5rem 3rem; border-radius: 1rem; box-sizing: border-box; min-width: 0;
+}
+.balance__label { font-size: 2.2rem; font-weight: 500; margin-bottom: -0.2rem; }
+.balance__date { font-size: 1.4rem; color: #ffd9de; }
+.balance__value { font-size: 4.5rem; font-weight: 400; word-break: break-word; }
+.accounts-overview .balance__value { font-size: 2rem; font-weight: 600; }
+
+.movements { grid-row: 2 / span 3; background-color: #fff; border-radius: 1rem; overflow: auto; border: 1px solid #eee; min-width: 0; }
+.movements__row { padding: 2.25rem 4rem; display: flex; align-items: center; border-bottom: 1px solid #eee; gap: 1rem; flex-wrap: wrap; box-sizing: border-box; }
+.movements__type { font-size: 1.1rem; text-transform: uppercase; font-weight: 500; color: #fff; padding: 0.1rem 1rem; border-radius: 10rem; margin-right: 2rem; white-space: nowrap; }
+.movements__date { font-size: 1.1rem; text-transform: uppercase; font-weight: 500; color: #666; }
+.movements__type--deposit { background-color: #c41230; }
+.movements__type--withdrawal { background-color: #1a1a1a; }
+.movements__value { font-size: 1.7rem; margin-left: auto; font-weight: 500; word-break: break-word; }
+
+.summary {
+  grid-row: 5 / 6; display: flex; align-items: baseline; padding: 1.5rem 2rem; margin-top: 1rem; flex-wrap: wrap; gap: 0.5rem;
+  background: #fff; border-radius: 1rem; border: 1px solid #eee; box-sizing: border-box; min-width: 0;
+}
+.summary__label { font-size: 1.2rem; font-weight: 500; text-transform: uppercase; margin-right: 0.8rem; }
+.summary__value { font-size: 2.2rem; margin-right: 2.5rem; word-break: break-word; }
+.summary__value--in, .summary__value--interest { color: #c41230; }
+.summary__value--out { color: #1a1a1a; }
+.btn--sort { margin-left: auto; border: none; background: none; font-size: 1.3rem; font-weight: 500; cursor: pointer; color: #c41230; }
+
+#tab-accounts .movements { grid-row: auto; grid-column: 1; }
+#tab-accounts .summary { grid-row: auto; grid-column: 1 / span 2; }
+#tab-accounts .logout-timer { grid-column: 1 / span 2; }
+
+.operation { border-radius: 1rem; padding: 3rem 4rem; color: #fff; background-color: #c41230; box-sizing: border-box; min-width: 0; }
+.operation h2 { color: #fff; }
+.operation p { color: #ffd9de; }
+#tranToLab, #tranFromLab, #tranToLab2, #tranFromLab2 { font-size: 22px; }
+#extTran {
+  background-color: #fff; color: #1a1a1a; border: 2px solid #c41230; min-height: 30vh;
+  padding: 1vh 8vw; border-radius: 1rem; box-sizing: border-box; min-width: 0;
+}
+#extTran h2, #extTran a { color: #c41230; }
+#extTran p { color: #333; }
+button { cursor: pointer; }
+#ext-tran-btn { margin-left: 1vw; font-size: 16px; }
+#maintenanceBody { background-size: 100%; padding-top: 50vh; }
+.operation--transfer { background-color: #c41230; }
+.operation--loan { background-color: #fff; color: #1a1a1a; border: 2px solid #c41230; }
+.operation--loan h2 { color: #c41230; }
+.operation--loan p { color: #666; }
+.operation--close { background-color: #1a1a1a; color: #fff; }
+.operation--close h2 { color: #fff; }
+h2 { margin-bottom: 1.5rem; font-size: 1.7rem; font-weight: 600; color: #333; }
+.form { display: grid; grid-template-columns: 2.5fr 2.5fr 1fr; grid-template-rows: auto auto; gap: 0.4rem 1rem; }
+.form.form--loan { grid-template-columns: 2.5fr 1fr 2.5fr; }
+.form__label--loan { grid-row: 2; }
+.form__input {
+  width: 100%; min-width: 0; border: none; background-color: rgba(255,255,255,0.9); font-family: inherit; font-size: 1.5rem;
+  text-align: center; color: #333; padding: 0.3rem 1rem; border-radius: 0.7rem; transition: all 0.3s; box-sizing: border-box;
+}
+.operation--loan .form__input { background-color: #f5f5f5; border: 1px solid #ddd; }
+.form__input:focus { outline: none; background-color: #fff; }
+.form__label { font-size: 1.3rem; text-align: center; }
+.form__btn { border: none; border-radius: 0.7rem; font-size: 1.8rem; background-color: #fff; color: #c41230; cursor: pointer; transition: all 0.3s; font-weight: 600; }
+.operation--loan .form__btn { background-color: #c41230; color: #fff; }
+.form__btn:focus { outline: none; background-color: #f5f5f5; }
+.logout-timer { padding: 0 0.3rem; margin-top: 1.9rem; text-align: right; font-size: 1.25rem; }
+.timer { font-weight: 600; color: #c41230; }
+
+.billpay-card { grid-column: 1 / span 2; background: #fff; border: 1px solid #eee; border-radius: 1rem; padding: 3rem; box-sizing: border-box; min-width: 0; }
+.billpay-card h2 { color: #c41230; font-size: 2.2rem; }
+.billpay-card > p { color: #666; font-size: 1.5rem; margin-bottom: 2rem; }
+.billpay-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.billpay-item { border: 1px solid #eee; border-radius: 1rem; padding: 2rem; display: flex; flex-direction: column; gap: 0.8rem; min-width: 0; box-sizing: border-box; }
+.billpay-item b { font-size: 1.6rem; }
+.billpay-item span { color: #888; font-size: 1.4rem; }
+.billpay-item button { background: #c41230; color: #fff; border: none; padding: 1rem; border-radius: 0.7rem; font-weight: 600; cursor: pointer; width: 100%; }
+.billpay-note { margin-top: 2rem !important; font-size: 1.3rem !important; }
+
+.profile-page { grid-column: 1 / span 2; background: #fff; border: 1px solid #eee; border-radius: 1rem; padding: 3rem; box-sizing: border-box; min-width: 0; }
+.profile-page__header { display: flex; align-items: center; gap: 2rem; padding-bottom: 2.5rem; border-bottom: 1px solid #eee; flex-wrap: wrap; }
+.profile-avatar { width: 7rem; height: 7rem; min-width: 7rem; border-radius: 50%; background: #c41230; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 2.4rem; font-weight: 700; }
+.profile-badge { background: #e6f7e6; color: #1a7a1a; padding: 0.5rem 1.2rem; border-radius: 10rem; font-size: 1.2rem; font-weight: 600; white-space: nowrap; }
+.profile-edit-btn { margin-left: auto; background: #fff; border: 1px solid #c41230; color: #c41230; padding: 1rem 2rem; border-radius: 0.7rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.profile-page__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; padding: 2.5rem 0; }
+.profile-field { min-width: 0; }
+.profile-field label { font-size: 1.2rem; color: #888; text-transform: uppercase; font-weight: 600; }
+.profile-field p { font-size: 1.6rem; margin-top: 0.5rem; word-break: break-word; overflow-wrap: anywhere; }
+.profile-page__alert { background: #fff5f6; border: 1px solid #ffd9de; padding: 1.5rem 2rem; border-radius: 1rem; font-size: 1.4rem; }
+
+/* ===== 5. FOOTER - FULL WIDTH ALL DEVICES ===== */
+.bofa-footer {
+  background: #1a1a1a; color: #fff;
+  width: 100vw !important; max-width: 100vw !important; min-width: 0 !important;
+  margin: 4rem 0 0 0 !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  border-radius: 0 !important; padding: 3rem !important; box-sizing: border-box;
+  flex-shrink: 0;
+}
+.footer__inner {
+  width: 100% !important; max-width: 120rem !important; margin: 0 auto !important;
+  text-align: center; font-size: 1.4rem; display: flex; flex-direction: column; gap: 1rem;
+  box-sizing: border-box; padding: 0 1rem;
+}
+.bofa-footer a { color: #fff; text-decoration: none; margin: 0 0.5rem; white-space: nowrap; }
+.footer__small { font-size: 1.1rem; color: #aaa; line-height: 1.6; }
+
+/* ===== TABLET: 1024px and below ===== */
+@media (max-width: 1024px) {
+  .hero__inner { padding: 4rem 2rem; gap: 3rem; }
+  .hero__text h1 { font-size: 3.8rem; }
+  .app { max-width: 95%; padding: 0 1.5rem; }
+  .topbar__inner, .main-nav { padding-left: 2rem !important; padding-right: 2rem !important; }
+  .billpay-grid { grid-template-columns: 1fr 1fr; }
+  .operation { padding: 2.5rem 2.5rem; }
+}
+
+/* ===== TABLET SMALL / LARGE PHONE: 800px and below ===== */
+@media (max-width: 800px) {
+  html { font-size: 58%; }
+  .topbar__inner, .main-nav, .info-strip { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+  .bofa-footer { padding: 2.5rem 1.5rem !important; }
+  .hero__inner { grid-template-columns: 1fr; padding: 3rem 1.5rem; text-align: center; }
+  .hero__text > p { margin: 0 auto; }
+  .hero__list { align-items: center; }
+  .hero__badges { justify-content: center; }
+  .hero__text h1 { font-size: 3.2rem; }
+  .nav__links, .topbar__links { display: none; }
+  .main-nav { justify-content: space-between; }
+  .info-strip { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .login-card { width: 100%; padding: 3rem 2rem; }
+  .profile-card { flex-direction: column; align-items: flex-start !important; }
+  .profile-card__right { text-align: left !important; }
+  .app { grid-template-columns: 1fr; grid-template-rows: auto; margin: 2rem auto; }
+  .balance, .movements, .summary, .profile-card { grid-column: 1; grid-row: auto; }
+  .billpay-grid, .profile-page__grid { grid-template-columns: 1fr; }
+  .dashboard-tabs { flex-wrap: wrap; }
+  .tab-btn { flex: 1 1 45%; font-size: 1.4rem; }
+  .tab-content.active { grid-template-columns: 1fr; }
+  .movements__row { padding: 1.8rem 1.5rem; }
+  .movements__type { margin-right: 0.5rem; }
+  .balance__value { font-size: 3.6rem; }
+  .profile-edit-btn { margin-left: 0; }
+  .form { grid-template-columns: 1fr 1fr; }
+  .form__btn { grid-column: 1 / span 2; padding: 1rem; }
+  .form.form--loan { grid-template-columns: 1fr 1fr; }
+}
+
+/* ===== PHONE: 480px and below ===== */
+@media (max-width: 480px) {
+  html { font-size: 55%; }
+  .brand-name { font-size: 1.7rem; }
+  .logo { height: 4.2rem; }
+  .welcome { font-size: 1.6rem; }
+  .topbar__inner { justify-content: center; text-align: center; }
+  .main-nav { padding: 1rem 1.2rem !important; }
+  .nav__right { width: 100%; justify-content: space-between; }
+  .hero__text h1 { font-size: 2.8rem; }
+  .login-section { padding: 1rem; }
+  .login-card { padding: 2.5rem 1.5rem; }
+  .info-strip { grid-template-columns: 1fr; padding: 2rem 1.5rem !important; }
+  .app { padding: 0 1rem; gap: 1.5rem; }
+  .accounts-overview, .profile-card, .balance, .billpay-card, .profile-page { padding: 1.8rem 1.5rem; }
+  .account-item { flex-direction: column; align-items: flex-start; }
+  .account-item__right { text-align: left; }
+  .balance { flex-direction: column; align-items: flex-start !important; }
+  .balance__value { font-size: 3.2rem; }
+  .summary { flex-direction: column; align-items: flex-start; }
+  .summary__value { margin-right: 0; }
+  .btn--sort { margin-left: 0; }
+  .dashboard-tabs { border-radius: 1rem; }
+  .tab-btn { flex: 1 1 100%; border-bottom: 1px solid #eee; }
+  .tab-btn:last-child { border-bottom: none; }
+  .tab-content.active { gap: 1.5rem; }
+  .operation { padding: 2rem 1.5rem; }
+  .form { grid-template-columns: 1fr; }
+  .form__btn { grid-column: 1; }
+  .profile-page__header { flex-direction: column; align-items: flex-start; }
+  .footer__inner { font-size: 1.3rem; }
+  .bofa-footer a { display: inline-block; margin: 0.3rem; }
+  .logout-timer { text-align: left; }
+}
+
+/* ===== VERY SMALL PHONE: 360px and below ===== */
+@media (max-width: 360px) {
+  html { font-size: 52%; }
+  .brand-name { font-size: 1.5rem; margin-left: 0.5rem; }
+  .hero__text h1 { font-size: 2.5rem; }
+  .balance__value { font-size: 2.8rem; }
+}

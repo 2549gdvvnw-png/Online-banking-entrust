@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>External Transfer | ENTRUST FARMERS BANK</title>
+  <style>
+    .ext-wrap { max-width: 72rem; margin: 3rem auto; padding: 0 1.5rem; width: 100%; box-sizing: border-box; }
+    .ext-card { background: #fff; border: 1px solid #eee; border-radius: 1rem; overflow: hidden; box-shadow: 0 1rem 3rem rgba(0,0,0,0.08); }
+    .ext-card__header { background: #c41230; color: #fff; padding: 2.5rem 3rem; }
+    .ext-card__header h1 { font-size: 2.4rem; margin: 0; }
+    .ext-card__header p { color: #ffd9de; font-size: 1.4rem; margin-top: 0.5rem; }
+    .ext-card__body { padding: 3rem; }
+    .ext-steps { display: flex; gap: 0; margin-bottom: 3rem; border: 1px solid #eee; border-radius: 10rem; overflow: hidden; }
+    .ext-step { flex: 1; text-align: center; padding: 1rem; font-size: 1.3rem; font-weight: 600; background: #f5f5f5; color: #888; }
+    .ext-step.active { background: #c41230; color: #fff; }
+    .ext-step.done { background: #e6f7e6; color: #1a7a1a; }
+    .ext-field { margin-bottom: 1.8rem; }
+    .ext-field label { display: block; font-size: 1.3rem; font-weight: 600; margin-bottom: 0.6rem; color: #333; }
+    .ext-field input, .ext-field select, .ext-field textarea { width: 100%; padding: 1.2rem 1.5rem; font-size: 1.6rem; font-family: inherit; border: 1px solid #ddd; border-radius: 0.7rem; box-sizing: border-box; background: #fff; }
+    .ext-field input:focus, .ext-field select:focus, .ext-field textarea:focus { outline: none; border-color: #c41230; }
+    .ext-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .ext-from-box { background: #fff5f6; border: 1px solid #ffd9de; border-radius: 0.8rem; padding: 1.5rem 2rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .ext-from-box b { font-size: 1.6rem; }
+    .ext-from-box span { color: #666; font-size: 1.3rem; display: block; }
+    .ext-from-box .ext-balance { font-size: 2rem; font-weight: 700; color: #c41230; }
+    .ext-type { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 2rem; }
+    .ext-type label { border: 1px solid #ddd; border-radius: 0.8rem; padding: 1.2rem 0.5rem; text-align: center; font-size: 1.4rem; font-weight: 600; cursor: pointer; }
+    .ext-type input { display: none; }
+    .ext-type input:checked + span { color: #c41230; }
+    .ext-type label:has(input:checked) { border-color: #c41230; background: #fff5f6; }
+    .ext-btn { width: 100%; padding: 1.4rem; border: none; border-radius: 0.7rem; background: #c41230; color: #fff; font-size: 1.7rem; font-weight: 600; cursor: pointer; }
+    .ext-btn:hover { background: #a30e28; }
+    .ext-btn--ghost { background: #fff; color: #c41230; border: 1px solid #c41230; margin-top: 1rem; }
+    .ext-review { background: #f9f9f9; border-radius: 0.8rem; padding: 2rem; margin-bottom: 2rem; font-size: 1.5rem; line-height: 2; }
+    .ext-review b { color: #1a1a1a; }
+    .ext-review span { float: right; font-weight: 600; }
+    .pin-box { text-align: center; }
+    .pin-box h2 { font-size: 2.2rem; color: #1a1a1a; }
+    .pin-box p { color: #666; font-size: 1.5rem; margin-bottom: 2rem; }
+    .pin-inputs { display: flex; gap: 1rem; justify-content: center; margin: 2rem 0; }
+    .pin-inputs input { width: 5.5rem; height: 5.5rem; text-align: center; font-size: 2.4rem; font-weight: 700; border: 1px solid #ddd; border-radius: 0.8rem; }
+    .pin-inputs input:focus { outline: none; border-color: #c41230; }
+    .pin-error { color: #c41230; font-size: 1.4rem; min-height: 2rem; margin-bottom: 1rem; font-weight: 600; }
+    .success-box { text-align: center; padding: 2rem 0; }
+    .success-icon { width: 8rem; height: 8rem; background: #e6f7e6; color: #1a7a1a; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 4rem; margin: 0 auto 2rem; }
+    .success-box h2 { color: #1a7a1a; font-size: 2.4rem; }
+    .success-box p { color: #666; font-size: 1.5rem; margin: 1rem 0; line-height: 1.6; }
+    .success-ref { background: #f5f5f5; padding: 1.2rem; border-radius: 0.7rem; font-size: 1.4rem; margin: 2rem 0; }
+    .hidden { display: none !important; }
+    @media (max-width: 600px) { .ext-card__body { padding: 2rem 1.5rem; } .ext-row, .ext-type { grid-template-columns: 1fr; } .pin-inputs input { width: 4.8rem; height: 4.8rem; } .ext-from-box { flex-direction: column; align-items: flex-start; gap: 0.8rem; } }
+  </style>
+</head>
+<body class="bofa-layout">
+  <div class="topbar"><div class="topbar__inner"><span>ENTRUST FARMERS BANK</span><span class="topbar__links"><a href="index.html">Home</a><a href="#">Help</a><a href="#">Contact Us</a></span></div></div>
+  <nav class="main-nav"><div class="nav__left"><img src="logo.png" alt="Entrust Farmers Bank Logo" class="logo" /><span class="brand-name">ENTRUST <b>FARMERS</b></span></div><div class="nav__right"><p class="welcome">McKay Joan</p><button onclick="goBackToAccounts()" class="btn--logout">← Back to Accounts</button></div></nav>
+  <div class="ext-wrap"><div class="ext-card">
+    <div class="ext-card__header"><h1>External Transfer</h1><p>Send money to another bank — Wire, ACH or International</p></div>
+    <div class="ext-card__body">
+      <div class="ext-steps"><div class="ext-step active" id="step1-ind">1 • Details</div><div class="ext-step" id="step2-ind">2 • Enter PIN</div><div class="ext-step" id="step3-ind">3 • Done</div></div>
+      <form id="transferForm">
+        <div class="ext-from-box"><div><b>From: Checking •••• 4821</b><span>McKay Joan</span></div><div class="ext-balance">$1,850,000.00</div></div>
+        <div class="ext-type"><label><input type="radio" name="transferType" value="Wire Transfer" checked /><span>⚡ Wire</span></label><label><input type="radio" name="transferType" value="ACH Transfer" /><span>🏦 ACH</span></label><label><input type="radio" name="transferType" value="International Transfer" /><span>🌍 International</span></label></div>
+        <div class="ext-field"><label>Recipient Full Name *</label><input type="text" id="recName" placeholder="e.g. John Smith" required /></div>
+        <div class="ext-row"><div class="ext-field"><label>Recipient Bank Name *</label><input type="text" id="recBank" placeholder="e.g. Chase Bank" required /></div><div class="ext-field"><label>Account Number *</label><input type="text" id="recAccount" placeholder="Recipient account number" required /></div></div>
+        <div class="ext-row"><div class="ext-field"><label>Routing / SWIFT / IBAN *</label><input type="text" id="recRouting" placeholder="Routing or SWIFT code" required /></div><div class="ext-field"><label>Amount (USD) *</label><input type="number" id="amount" placeholder="0.00" min="1" max="1850000" step="0.01" required /></div></div>
+        <div class="ext-field"><label>Memo / Purpose (optional)</label><input type="text" id="memo" placeholder="e.g. Farm payment, family support" /></div>
+        <button type="submit" class="ext-btn">Continue &rarr;</button>
+        <button type="button" onclick="goBackToAccounts()" style="display:block; width:100%; background:none; border:none; margin-top:1.2rem; color:#c41230; font-size:1.4rem; cursor:pointer;">← Cancel and return to Accounts</button>
+      </form>
+      <div id="pinPage" class="hidden"><div class="pin-box"><h2>Enter Your PIN to Proceed</h2><p>For security, enter your 4-digit transfer PIN to confirm this transfer.</p><div class="ext-review" id="reviewBox"></div><div class="pin-inputs"><input type="password" maxlength="1" inputmode="numeric" class="pin-digit" /><input type="password" maxlength="1" inputmode="numeric" class="pin-digit" /><input type="password" maxlength="1" inputmode="numeric" class="pin-digit" /><input type="password" maxlength="1" inputmode="numeric" class="pin-digit" /></div><p class="pin-error" id="pinError"></p><p style="font-size:1.3rem; color:#888;">Demo PIN: <b>1234</b> &nbsp;|&nbsp; <a href="#" style="color:#c41230;">Forgot PIN?</a></p><button class="ext-btn" id="confirmBtn">Confirm Transfer &rarr;</button><button class="ext-btn ext-btn--ghost" id="backBtn">&larr; Back to Details</button></div></div>
+      <div id="successPage" class="hidden"><div class="success-box"><div class="success-icon">✓</div><h2>Transfer Submitted!</h2><p>Your external transfer has been submitted successfully.<br />It will be processed within 1-2 business days.</p><div class="success-ref" id="successDetails"></div><button class="ext-btn" onclick="goBackToAccounts()">Done — Back to Accounts</button><button class="ext-btn ext-btn--ghost" onclick="location.reload()">Make Another Transfer</button></div></div>
+    </div>
+  </div></div>
+  <footer class="bofa-footer"><div class="footer__inner"><p><b>ENTRUST FARMERS BANK</b> — Member FDIC. Equal Housing Lender.</p><p><a href="#">Privacy</a> | <a href="#">Security</a> | <a href="#">Terms</a></p><p class="footer__small">© 2026 Entrust Farmers Bank. Demo project.</p></div></footer>
+<script>
+  function goBackToAccounts() {
+    if (document.referrer.includes('index.html') || window.history.length > 1) { window.history.back(); } else { window.location.href = 'index.html'; }
+  }
+  const form = document.getElementById('transferForm');
+  const pinPage = document.getElementById('pinPage');
+  const successPage = document.getElementById('successPage');
+  const pinDigits = document.querySelectorAll('.pin-digit');
+  const pinError = document.getElementById('pinError');
+  let transferData = {};
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const recName = document.getElementById('recName').value.trim();
+    const recBank = document.getElementById('recBank').value.trim();
+    const recAccount = document.getElementById('recAccount').value.trim();
+    const recRouting = document.getElementById('recRouting').value.trim();
+    const amount = document.getElementById('amount').value;
+    const memo = document.getElementById('memo').value.trim();
+    const type = document.querySelector('input[name="transferType"]:checked').value;
+    if (!recName || !recBank || !recAccount || !recRouting || !amount) { alert('Please fill all required fields.'); return; }
+    if (+amount <= 0 || +amount > 1850000) { alert('Amount must be between $1 and $1,850,000.'); return; }
+    transferData = { recName, recBank, recAccount, recRouting, amount: (+amount).toFixed(2), memo, type };
+    document.getElementById('reviewBox').innerHTML = `<div><b>Type:</b> <span>${type}</span></div><div><b>To:</b> <span>${recName}</span></div><div><b>Bank:</b> <span>${recBank}</span></div><div><b>Account:</b> <span>•••• ${recAccount.slice(-4)}</span></div><div><b>Amount:</b> <span style="color:#c41230;">$${transferData.amount}</span></div>`;
+    form.classList.add('hidden'); pinPage.classList.remove('hidden');
+    document.getElementById('step1-ind').classList.remove('active'); document.getElementById('step1-ind').classList.add('done'); document.getElementById('step2-ind').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' }); pinDigits[0].focus();
+  });
+  document.getElementById('backBtn').addEventListener('click', function() {
+    pinPage.classList.add('hidden'); form.classList.remove('hidden');
+    document.getElementById('step1-ind').classList.add('active'); document.getElementById('step1-ind').classList.remove('done'); document.getElementById('step2-ind').classList.remove('active');
+    pinDigits.forEach(i => i.value = ''); pinError.textContent = '';
+  });
+  pinDigits.forEach((input, idx) => {
+    input.addEventListener('input', () => { input.value = input.value.replace(/[^0-9]/g, ''); if (input.value && idx < pinDigits.length - 1) pinDigits[idx + 1].focus(); });
+    input.addEventListener('keydown', (e) => { if (e.key === 'Backspace' && !input.value && idx > 0) pinDigits[idx - 1].focus(); if (e.key === 'Enter') document.getElementById('confirmBtn').click(); });
+  });
+  document.getElementById('confirmBtn').addEventListener('click', function() {
+    const pin = Array.from(pinDigits).map(i => i.value).join('');
+    if (pin.length !== 4) { pinError.textContent = 'Please enter your 4-digit PIN.'; return; }
+    if (pin !== '1234') { pinError.textContent = 'Incorrect PIN. Try 1234 for demo.'; pinDigits.forEach(i => i.value = ''); pinDigits[0].focus(); return; }
+    const ref = 'EFT' + Math.floor(100000 + Math.random() * 900000);
+    const saved = JSON.parse(localStorage.getItem('extTransfers') || '[]');
+    saved.push({ amount: -Number(transferData.amount), date: new Date().toISOString(), from: `External Transfer - ${transferData.type} to ${transferData.recName} (${transferData.recBank}) - Ref ${ref}`, ref: ref });
+    localStorage.setItem('extTransfers', JSON.stringify(saved));
+    document.getElementById('successDetails').innerHTML = `<b>Reference:</b> ${ref}<br><b>To:</b> ${transferData.recName} — ${transferData.recBank}<br><b>Amount:</b> $${transferData.amount} • ${transferData.type}`;
+    pinPage.classList.add('hidden'); successPage.classList.remove('hidden');
+    document.getElementById('step2-ind').classList.remove('active'); document.getElementById('step2-ind').classList.add('done'); document.getElementById('step3-ind').classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>

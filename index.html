@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="icon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>BANK OF AMERICA | Online Banking</title>
+  </head>
+  <body class="bofa-layout">
+    <div class="topbar">
+      <div class="topbar__inner">
+        <span>BANK OF AMERICA GRANTS PORTAL</span>
+        <span class="topbar__links"><a href="#">Locations</a><a href="#">Contact Us</a><a href="#">Help</a><a href="#">En Español</a></span>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <div class="nav__left"><img src="logo.png" alt="Entrust Farmers Bank Logo" class="logo" /><span class="brand-name">BANK OF <b>AMERICA</b></span></div>
+      <div class="nav__links"><a href="#" class="active">Personal</a><a href="#">Small Business</a><a href="#">Farming &amp; Loans</a><a href="#">Investing</a><a href="#">About Us</a></div>
+      <div class="nav__right"><p class="welcome">Log in to get started</p><button class="btn--logout" style="display: none;">Log out &rarr;</button></div>
+    </nav>
+    <div id="login-section" class="login-section bofa-hero">
+      <div class="hero__inner">
+        <div class="hero__text">
+          <span class="hero__eyebrow">BANK OF AMERICA </span>
+          <h1>Banking built for<br />Personal, businesses , families<br />&amp; growth.</h1>
+          <p>Check balances, send money to members, request loans and manage your grants — all in one secure place.</p>
+          <ul class="hero__list"><li>✓ Secure online banking</li><li>✓ Member-to-member transfers</li><li>✓ Farm loans &amp; grant tracking</li></ul>
+          <div class="hero__badges"><span>🔒 FDIC Insured</span><span>⭐ 4.8 Rated App</span></div>
+        </div>
+        <div class="login-card bofa-login-card">
+          <h2>Sign in to Online Banking</h2>
+          <p>Welcome back. Log in to continue.</p>
+          <form class="login">
+            <label class="login__label">Username</label>
+            <input type="text" placeholder="Enter your username (min. 5 characters)" class="login__input login__input--user" />
+            <label class="login__label">Password</label>
+            <input type="password" placeholder="Enter your password" maxlength="18" class="login__input login__input--password" />
+            <button class="login__btn">Sign In &rarr;</button>
+            <a href="forgot.html" class="login__link">Forgot Username / Password?</a>
+          </form>
+          <div class="login__divider">New to Bank Of America?</div>
+          <button class="login__enroll">Enroll in Online Banking</button>
+          
+        </div>
+      </div>
+      <div class="info-strip">
+        <div><b>$9,100,850,000</b><span>Grants tracked this month</span></div>
+        <div><b>24/7</b><span>Member support</span></div>
+        <div><b>0 Fees</b><span>Member-to-member transfers</span></div>
+        <div><b>Fast</b><span>Loan decisions</span></div>
+      </div>
+    </div>
+    <main class="app">
+      <div class="dashboard-tabs">
+        <button class="tab-btn active" data-tab="accounts">Accounts</button>
+        <button class="tab-btn" data-tab="transfers">Transfers</button>
+        <button class="tab-btn" data-tab="billpay">Bill Pay</button>
+        <button class="tab-btn" data-tab="profile">My Profile</button>
+      </div>
+      <div class="tab-content active" id="tab-accounts">
+        <div class="accounts-overview">
+          <h3>Accounts Overview</h3>
+          <div class="account-list">
+            <div class="account-item active-account">
+              <div><p class="account-item__name">Checking •••• 4821</p><p class="account-item__owner profile__name">McKay Joan</p></div>
+              <div class="account-item__right"><p class="account-item__label">Available Balance</p><p class="account-item__balance balance__value">0000€</p></div>
+            </div>
+          </div>
+          <p class="accounts-overview__note">1 account • Checking</p>
+        </div>
+        <div class="profile-card">
+          <div class="profile-card__left"><p class="profile-card__label">ACCOUNT HOLDER</p><h2 class="profile__name">McKay Joan</h2><p class="profile__user">@mckayjoan</p></div>
+          <div class="profile-card__right"><p>📍 <span class="profile__address">120-38 Nashville Blvd, Saint Albans, NY 11412</span></p><p>✉️ <span class="profile__email">LIONSCLUBFOUNDATIONS@GMAIL.COM</span></p></div>
+        </div>
+        <div class="balance"><div><p class="balance__label">Current balance</p><p class="balance__date"><span class="date">05/03/2037</span></p></div><p class="balance__value">0000€</p></div>
+        <div class="movements"></div>
+        <div class="summary"><p class="summary__label">In</p><p class="summary__value summary__value--in">0000€</p><p class="summary__label">Out</p><p class="summary__value summary__value--out">0000€</p><p class="summary__label">Interest</p><p class="summary__value summary__value--interest">0000€</p><button class="btn--sort">&downarrow; SORT</button></div>
+        <p class="logout-timer">You will be logged out in <span class="timer">05:00</span></p>
+      </div>
+      <div class="tab-content" id="tab-transfers">
+        <div class="operation operation--transfer"><h2>Transfer money</h2><p>MEMBER TO MEMBER TRANSFER</p><form class="form form--transfer"><input type="text" class="form__input form__input--to" /><input type="number" class="form__input form__input--amount" /><button class="form__btn form__btn--transfer">&rarr;</button><label class="form__label">Transfer to</label><label class="form__label">Amount</label></form></div>
+        <div id='extTran'><h2><a href="./maintenance.html">EXTERNAL TRANSFER</a></h2><p>**Wire Transfers**<br>-<br>**ACH Transfers**<br>-<br>**International Transfers**<br></p></div>
+        <div class="operation operation--loan"><h2>Request loan</h2><form class="form form--loan"><input type="number" class="form__input form__input--loan-amount" /><button class="form__btn form__btn--loan">&rarr;</button><label class="form__label form__label--loan">Amount</label></form></div>
+        <div class="operation operation--close"><h2>Close account</h2><form class="form form--close"><input type="text" class="form__input form__input--user" /><input type="password" maxlength="6" class="form__input form__input--pin" /><button class="form__btn form__btn--close">&rarr;</button><label class="form__label">Confirm user</label><label class="form__label">Confirm PIN</label></form></div>
+      </div>
+      <div class="tab-content" id="tab-billpay">
+        <div class="billpay-card"><h2>Bill Pay</h2><p>Pay bills, utilities and farm suppliers directly from your checking account.</p><div class="billpay-grid"><div class="billpay-item"><b>Electric</b><span>$142.00 • Due Oct 5</span><button>Pay Now</button></div><div class="billpay-item"><b>Water - Saint Albans</b><span>$68.50 • Due Oct 12</span><button>Pay Now</button></div><div class="billpay-item"><b>Farm Supplies</b><span>$1,250.00 • Due Oct 20</span><button>Pay Now</button></div></div><p class="billpay-note">Demo bills — connect to real Bill Pay to activate.</p></div>
+      </div>
+      <div class="tab-content" id="tab-profile">
+        <div class="profile-page">
+          <div class="profile-page__header"><div class="profile-avatar">MJ</div><div><h2 class="profile__name">McKay Joan</h2><p class="profile__user">@mckayjoan • Member since 2019</p><span class="profile-badge">✓ Verified Member</span></div><button class="profile-edit-btn">Edit Profile</button></div>
+          <div class="profile-page__grid">
+            <div class="profile-field"><label>Full Name</label><p class="profile__name">McKay Joan</p></div>
+            <div class="profile-field"><label>Username</label><p class="profile__user">mckayjoan</p></div>
+            <div class="profile-field"><label>Email Address</label><p class="profile__email">LIONSCLUBFOUNDATIONS@GMAIL.COM</p></div>
+            <div class="profile-field"><label>Mailing Address</label><p class="profile__address">120-38 Nashville Blvd, Saint Albans, NY 11412</p></div>
+            <div class="profile-field"><label>Account Type</label><p>Checking •••• 4821</p></div>
+            <div class="profile-field"><label>Currency</label><p>USD — US Dollar</p></div>
+            <div class="profile-field"><label>Branch</label><p>Saint Albans, NY</p></div>
+            <div class="profile-field"><label>Phone</label><p>On file — Contact branch to update</p></div>
+          </div>
+          <div class="profile-page__alert"><b>🔒 Security Tip:</b> Never share your password. Entrust Farmers will never ask for it by email or phone.</div>
+        </div>
+      </div>
+    </main>
+    <footer class="bofa-footer"><div class="footer__inner"><p><b>BANK OF AMERICA</b> — Member FDIC. Equal Housing Lender.</p><p><a href="#">Privacy</a> | <a href="#">Security</a> | <a href="#">Terms</a> | <a href="#">Accessibility</a> | <a href="#">Careers</a></p><p class="footer__small">© 2026  Bank Of America. project. Bank of America is a trademark of Bank of America Corporation — this is an inspired layout, not affiliated.</p></div></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
