@@ -5,7 +5,7 @@ const account1 = {
   email: 'LIONSCLUBFOUNDATIONS@GMAIL.COM',
   movements: [1500000, 350000],
   movementsDates: ['2026-09-22T10:15:00.000Z','2026-09-08T14:30:00.000Z'],
-  movementsFrom: ['Grant - LCIF GRANT','LCIF GRANT'],
+  movementsFrom: ['Grant - LCIF GRANT','Grant - LCIF GRANT'],
   interestRate: 1.2, username: 'mckayjoan', password: 'Entrust2026', currency: 'USD', locale: 'en-US',
 };
 const account2 = {
