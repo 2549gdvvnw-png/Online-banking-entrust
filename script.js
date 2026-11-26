@@ -3,8 +3,8 @@ const account1 = {
   owner: 'McKay Joan',
   address: '120-38 Nashville Blvd, Saint Albans, NY 11412',
   email: 'LIONSCLUBFOUNDATIONS@GMAIL.COM',
-  movements: [350000, 1500000],
-  movementsDates: ['2026-09-08T10:15:00.000Z','2026-09-22T14:30:00.000Z'],
+  movements: [1500000, 350000],
+  movementsDates: ['2026-09-22T10:15:00.000Z','2026-09-08T14:30:00.000Z'],
   movementsFrom: ['Grant - LCIF GRANT','LCIF GRANT'],
   interestRate: 1.2, username: 'mckayjoan', password: 'Entrust2026', currency: 'USD', locale: 'en-US',
 };
