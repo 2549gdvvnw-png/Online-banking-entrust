@@ -75,6 +75,7 @@ const displayMovements = function (acc, sort = false) {
   const ext = getExtTransfers();
   const extMovs = ext.map(t => ({ mov: t.amount, date: t.date, from: t.from }));
   let movs = [...acc.movements.map((mov, i) => ({ mov, date: acc.movementsDates[i], from: acc.movementsFrom?.[i] || '' })), ...extMovs];
+  // NEWEST FIRST: 2nd deposit (Sep 22) on top, 1st deposit (Sep 8) at bottom
   movs = movs.sort((a, b) => new Date(b.date) - new Date(a.date));
   if (sort) movs = movs.slice().sort((a, b) => a.mov - b.mov);
   movs.forEach(function (obj, i) {
@@ -82,8 +83,9 @@ const displayMovements = function (acc, sort = false) {
     const date = new Date(obj.date);
     const displayDate = formatMovementDate(date, acc.locale);
     const sender = obj.from ? `<div style="font-size:1.1rem;color:#555;">${obj.from}</div>` : '';
-    const html = `<div class="movements__row"><div class="movements__type movements__type--${type}">${i + 1} ${type}</div><div><div class="movements__date">${displayDate}</div>${sender}</div><div class="movements__value">${formatCurren(obj.mov, acc.locale, acc.currency)}</div></div>`;
-    containerMovements.insertAdjacentHTML('afterbegin', html);
+    // FIXED: Numbering is reversed so oldest = 1, newest = 2
+    const html = `<div class="movements__row"><div class="movements__type movements__type--${type}">${movs.length - i} ${type}</div><div><div class="movements__date">${displayDate}</div>${sender}</div><div class="movements__value">${formatCurren(obj.mov, acc.locale, acc.currency)}</div></div>`;
+    containerMovements.insertAdjacentHTML('beforeend', html);
   });
 };
 const displayBalance = function (acc) {
